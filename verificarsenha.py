@@ -5,7 +5,6 @@ def verificar_senha(senha):
 
 	if len(senha) < 8:
 		return False
-	
 	temMaius = temMinus = temNum = temEspecial = False
 
 	for char in senha:
@@ -33,7 +32,7 @@ janela = Tk()
 janela.title("Verificador de senhas")
 janela.geometry("500x500")
 janela.configure(bg='#1b1521')
-
+janela.resizable(False, False)
 
 # FRAME
 campo_de_senha = Frame(janela, bg="#261e2e", borderwidth=5, relief='flat')
@@ -44,7 +43,7 @@ label_senha = Label(campo_de_senha, text="Digite sua senha", font=('Times New Ro
 label_senha.place(relx=0.5, rely=0.1, anchor=CENTER)
 
 # INPUT FIELD
-entrada_senha = Entry(campo_de_senha) #show='*'
+entrada_senha = Entry(campo_de_senha)#, show='*')
 entrada_senha.place(relx=0.5, rely=0.5, anchor=CENTER, width=200)
 
 # FOTO dentro do FRAME
